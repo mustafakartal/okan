@@ -1,0 +1,15 @@
+<app-header *ngIf="isAuthenticated"></app-header>
+<div class="clearfix" *ngIf="isAuthenticated"> </div>
+<div class="page-container">
+  <app-menu *ngIf="isAuthenticated"></app-menu>
+  <router-outlet></router-outlet>
+</div>
+<div class="page-footer" *ngIf="isAuthenticated">
+  <div class="page-footer-inner">
+    2020 &copy;<a> Tüm hakları saklıdır.</a>
+  </div>
+  <div class="scroll-to-top">
+    <i class="icon-arrow-up"></i>
+  </div>
+</div>
+<div class="quick-nav-overlay"></div>

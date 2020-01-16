@@ -1,0 +1,32 @@
+<link href="/assets/pages/css/login.min.css" rel="stylesheet" type="text/css" />
+<div class=" login">
+    <div class="logo">
+        <a href=""></a>
+    </div>
+    <div class="content">
+        <form class="login-form" [formGroup]="loginForm" (ngSubmit)="login()">
+            <h3 class="form-title font-green">
+            </h3>
+            <div class="alert alert-danger display-hide">
+                <button class="close" data-close="alert"></button>
+                <span> Lütfen Kullanıcı Adı ve Şifrenizi Giriniz! </span>
+            </div>
+            <div class="form-group">
+                <label class="control-label visible-ie8 visible-ie9">Kullanıcı Adı</label>
+                <input matInput class="form-control form-control-solid placeholder-no-fix" type="email" autocomplete="off" placeholder="Kullanıcı Adı" required  formControlName="username"/>
+            </div>
+            <div class="form-group">
+                <label class="control-label visible-ie8 visible-ie9">Şifre</label>
+                <input matInput class="form-control form-control-solid placeholder-no-fix" type="password" autocomplete="off"
+                    placeholder="Şifre" required formControlName="password"/>
+            </div>
+            <div class="form-actions text-right">
+                <button type="submit" class="btn green">Giriş</button>
+                <img *ngIf="loading" class="pl-3"
+                src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" />
+            
+            </div>
+        </form>
+    </div>
+    <div class="copyright"> 2020 © Mustafa Kartal </div>    
+</div>

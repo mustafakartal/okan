@@ -1,0 +1,61 @@
+<div class="page-content-wrapper">
+    <div class="page-content">
+        <div class="profile-content">
+            <div class="portlet light bordered">
+                <div class="caption caption-md">
+                    <i class="icon-globe theme-font hide"></i>
+                    <span class="caption-subject font-blue-madison bold uppercase">{{PageTitle}}</span>
+                </div>
+                <div class="portlet-body">
+                    <div class="tab-content">
+                        <form method="post" enctype="multipart/form-data" class="form-horizontal form-bordered"
+                            id="form">
+                            <div class="form-group form-md-line-input">
+                                <label class="control-label col-md-3">Proje Adı</label>
+                                <div class="col-md-4">
+                                    <input type="text" class="form-control" id="Name" autocomplete="off"
+                                        ng-model="form.Name">
+                                </div>
+                            </div>
+                            <div class="form-group form-md-line-input">
+                                <label class="control-label col-md-3">Kısıtlama</label>
+                                <div class="col-md-4">
+                                    <div class="md-checkbox">
+                                        <input type="checkbox" id="element" class="md-check" ng-model="form.HasLimit">
+                                        <label for="element">
+                                            <span></span>
+                                            <span class="check"></span>
+                                            <span class="box"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group form-md-line-input" ng-show="form.HasLimit">
+                                <label class="control-label col-md-3">Kısıtlama Tipi</label>
+                                <div class="col-md-4">
+                                    <select class="bs-select form-control" id="Type" ng-model="form.LimitType">
+                                        <option value="0">Kısıtlama Tipi Seçiniz</option>
+                                        <option value="1">Kapat</option>
+                                        <option value="2">Yavaşlat</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group form-md-line-input" ng-show="form.HasLimit && form.LimitType=='2'">
+                                <label class="control-label col-md-3">Yavaşlatma Süresi</label>
+                                <div class="col-md-4">
+                                    <input type="text" class="form-control" id="TimeOut" autocomplete="off"
+                                        ng-model="form.TimeOut">
+                                </div>
+                            </div>
+                            <div class="margin-top-10 text-right">
+                                <img src="/assets/layouts/layout4/img/loading-spinner-blue.gif" class="hidden"
+                                    id="loader" />
+                                <button type="submit" class="btn blue">{{SubmitButtonText}}</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
